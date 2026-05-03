@@ -1,14 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Online Shop</title>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body>
 <?php
 session_start();
 include 'config/db.php';
 
 
-if (!isset($_SESSION['username'])) {
+/*if (!isset($_SESSION['username'])) {
     header("Location: index.php");
     exit();
-}
+}*/
 
-$username = $_SESSION['username']; 
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : "Guest"; 
 ?>
 <nav class="nike-navbar">
     <div class="logo">
